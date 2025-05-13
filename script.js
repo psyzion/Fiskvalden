@@ -4,9 +4,9 @@
 
 // Array med bild-URL:er till fiskbilder
 const bilder = [
-    "/img/bildspel1.jpg",
-    "/img/bildspel2.jpg",
-    "/img/bildspel3.jpg"
+    "bildspel1.jpg",
+    "bildspel2.jpg",
+    "bildspel3.jpg"
     
   ];
   

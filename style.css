@@ -1,0 +1,176 @@
+/* ===============================
+   Allmänna inställningar (root)
+   =============================== */
+   :root {
+    --bakgrund: #121212; /* Mörkt bakgrundstema */
+    --text: #ffffff;      /* Ljus text för kontrast */
+    --primar: #1e88e5;    /* Blå accentfärg */
+    --sekundar: #333333;  /* Sekundär färg för kort/bakgrunder */
+    --max-bredd: 1200px;  /* Maxbredd för innehåll */
+    --mellanrum: 1rem;     /* Standardmellanrum */
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--bakgrund);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* ===============================
+     Navigationsmeny (Flexbox)
+     =============================== */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sekundar);
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primar);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--primar);
+  }
+  
+  /* ===============================
+     Introduktion
+     =============================== */
+  .intro {
+    padding: 2rem;
+    text-align: center;
+    background-color: #1e1e1e;
+  }
+  
+  /* ===============================
+     Fiskarter med CSS Grid
+     =============================== */
+  .grid-section {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: var(--max-bredd);
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .grid-section article {
+    background-color: var(--sekundar);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+  }
+  
+  /* ===============================
+     Bildspel
+     =============================== */
+  .slideshow {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1a1a1a;
+  }
+  
+  .slider {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ===============================
+     Kontakt
+     =============================== */
+  .kontakt {
+    padding: 2rem;
+    background-color: var(--sekundar);
+    text-align: center;
+  }
+  
+  .kontakt a {
+    color: var(--primar);
+    text-decoration: none;
+  }
+  
+  .kontakt a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===============================
+     Footer
+     =============================== */
+  footer {
+    background-color: #000;
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* ===============================
+     Responsivitet
+     =============================== */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    nav h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* ==============================
+   Fade-effekt för bildspelet
+============================== */
+
+.slider img {
+    /* Startläge: full synlighet */
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Mjuk övergång under 1 sekund */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lätt skugga för att lyfta fram bilden */
+  }
+  
+  /* Klass som appliceras temporärt vid bildbyte */
+  .slider img.fade-out {
+    opacity: 0; /* Bilden blir transparent under övergången */
+  }
+
+  

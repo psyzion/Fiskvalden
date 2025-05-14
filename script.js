@@ -1,5 +1,6 @@
 // ===============================
 //  Bildspel för sektionen "Galleri"
+//  © 2025 Nicklas Olsson 
 // ===============================
 
 // Array med bild-URL:er till fiskbilder

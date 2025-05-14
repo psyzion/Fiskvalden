@@ -24,7 +24,5 @@ Projektet är publicerat via GitHub Pages:
 - Flexbox och CSS Grid används tillsammans för att strukturera innehållet.
 - Bilder hämtade från https://commons.wikimedia.org, fria att använda.
 
-
-
 ---
-
+© 2025 Nicklas Olsson  
